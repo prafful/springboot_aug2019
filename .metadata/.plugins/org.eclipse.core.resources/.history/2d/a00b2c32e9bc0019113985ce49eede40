@@ -1,0 +1,4 @@
+server.port=7788
+
+spring.datasource.url=jdbc://mysql://localhost:3306/friendtank
+spring.

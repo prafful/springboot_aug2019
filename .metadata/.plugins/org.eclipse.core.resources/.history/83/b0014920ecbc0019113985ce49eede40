@@ -1,0 +1,21 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.dao.FriendDao;
+import com.example.demo.pojo.Friend;
+
+@Service(friendService)
+public class FriendService {
+	
+	@Autowired
+	private FriendDao friendDao;
+
+	public void addFriend(Friend f) {
+		// TODO Auto-generated method stub
+		friendDao.addFriend(f);
+		
+	}
+
+}

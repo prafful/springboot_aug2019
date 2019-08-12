@@ -1,0 +1,7 @@
+server.port=7788
+
+spring.datasource.url=jdbc://mysql://localhost:3306/friendtank
+spring.datasource.username=root
+spring.datasource.password=root1
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

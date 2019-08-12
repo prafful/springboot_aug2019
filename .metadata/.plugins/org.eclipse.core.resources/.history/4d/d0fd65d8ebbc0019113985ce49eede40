@@ -1,0 +1,16 @@
+package com.example.demo.service;
+
+import com.example.demo.dao.FriendDao;
+import com.example.demo.pojo.Friend;
+
+public class FriendService {
+	
+	private FriendDao friendDao;
+
+	public void addFriend(Friend f) {
+		// TODO Auto-generated method stub
+		friendDao.addFriend(f);
+		
+	}
+
+}

@@ -1,0 +1,44 @@
+package com.example.demo.restcontroller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.pojo.Friend;
+
+@RestController
+public class HelloController {
+
+	
+	@RequestMapping("/")
+	public String welcome() {
+		return "Welcome to Spring Boot!!!! with Devtools.";
+	}
+	
+	
+	@RequestMapping("/all")
+	public List<Friend> getAllFriends() {
+		List<Friend> friends = new ArrayList<Friend>();
+		friends.add(new Friend(1, "OBB", "Chennai"));
+		friends.add(new Friend(2, "OK", "Kolkata"));
+		friends.add(new Friend(3, "Buk", "Mumbai"));
+		friends.add(new Friend(1, "Jum", "Shimla"));
+		
+		return friends;
+	
+	}
+	
+	@RequestMapping(value = "/friend/add", method = RequestMethod.POST)
+	//@PostMapping("/friend/add")
+	public void addFriend(@RequestBody Friend f) {
+		System.out.println("Friend: " + f.getId() + " " + f.getName() +" " + f.getLocation(); );
+	}
+	
+	
+	
+}

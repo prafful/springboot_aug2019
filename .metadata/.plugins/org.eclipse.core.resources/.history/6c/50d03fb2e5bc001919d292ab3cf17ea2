@@ -1,0 +1,10 @@
+package com.example.demo.pojo;
+
+public class Friend {
+	
+	
+	private int id;
+	private String name;
+	private string location;
+
+}
